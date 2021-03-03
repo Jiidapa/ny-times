@@ -3,8 +3,9 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         screens: {
-            sm: '480px',
-            md: '768px',
+            xs: { max: '280px' },
+            sm: { min: '281px', max: '540px' },
+            md: '540',
             lg: '976px',
             xl: '1440px'
         },
@@ -18,6 +19,17 @@ module.exports = {
             },
             borderRadius: {
                 default: '64px'
+            },
+            fontSize: {
+                xxs: '0.687rem', // 10px
+                xs: '0.75rem', // 12px
+                sm: '0.875rem', // 14px
+                default: '1rem', // 16px
+                md: '1.125rem', //18rem
+                lg: '1.25rem', // 20px
+                xl: '1.5rem', // 24rem
+                '2xl': '2rem', // 32px
+                '3xl': '2.5rem' // 40px
             }
         }
     },

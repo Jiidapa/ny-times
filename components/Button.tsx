@@ -16,7 +16,7 @@ const Button: React.FC<Button> = ({ htmlType, type, children, onClick }: Button)
                 type === 'rounded'
                     ? 'rounded-default bg-black text-white'
                     : type === 'text'
-                    ? 'bg-none '
+                    ? 'bg-none sm:px-0 xs:px-0'
                     : 'rounded-0 bg-black text-white'
             }`}>
             {children}

@@ -3,9 +3,38 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 body {
-    @apply font-sans;
+    @apply font-sans text-default;
 }
 
 button:focus {
     outline: none !important;
+}
+
+.logo {
+    background-image: url(../public/assets/icons/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 64px;
+    height: 64px;
+    width: 64px;
+}
+
+.search-container {
+    background-image: url(../public/assets/icons/search_icon.svg);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    height: 32px;
+    width: 32px;
+}
+
+@media (max-width: 520px) {
+    .logo {
+        background-size: 32px;
+        height: 32px;
+        width: 32px;
+    }
+    .search-container {
+        background-size: 24px;
+        height: 24px;
+        width: 24px;
+    }
 }
