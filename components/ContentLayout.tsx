@@ -1,47 +1,65 @@
 import React from 'react'
 import { calcualteDay } from '@utils/index'
 import Image from 'next/image'
+import { useSetRecoilState } from 'recoil'
+import { useRouter } from 'next/router'
+import { contentSelector } from '@stores/index'
+import { Result } from '@interfaces/index'
+
 export interface LayoutType {
     data: DataType
 }
 
 export interface DataType {
     name: string
-    value: any[]
+    value: ContentType
+}
+
+interface ContentType {
+    value: Result[]
 }
 
 const Layout: React.FC<LayoutType> = ({ data }: LayoutType) => {
+    const router = useRouter()
+    const SetContent = useSetRecoilState(contentSelector)
+
+    const handleOnClickContent = (value: Result) => {
+        SetContent(value)
+        router.push(`/content/${value.id}`)
+    }
+
     const layout1 = (value: any): any => {
-        console.log('value ', value)
         const component = (
             <div>
                 <div className="flex flex-wrap">
-                    <div className="md:w-3/5 md:pr-4">
-                        {value[0]?.media[0]?.['media-metadata'][2].url ? (
-                            <img
-                                src={value[0]?.media[0]?.['media-metadata'][2].url}
-                                width="100%"
-                                loading="lazy"
-                                className="object-cover"
-                            />
-                        ) : (
-                            <div className="flex items-center justify-center">
-                                <Image
-                                    src="/assets/icons/empty-image.png"
-                                    alt="me"
-                                    width="64"
-                                    height="64"
+                    <button className="text-left" onClick={() => handleOnClickContent(value[0])}>
+                        <div className="md:w-3/5 md:pr-4">
+                            {value[0]?.media[0]?.['media-metadata'][2].url ? (
+                                <img
+                                    src={value[0]?.media[0]?.['media-metadata'][2].url}
+                                    width="100%"
+                                    loading="lazy"
+                                    className="object-cover"
                                 />
-                            </div>
-                        )}
-                    </div>
-                    <div className="md:w-2/5 sm:mt-4">
-                        <div className="font-bold text-lg">{value[0]?.title}</div>
-                        <div className="text-sm mt-2">{value[0]?.abstract}</div>
-                        <div className="text-black-50 text-sm mt-2">
-                            {calcualteDay(value[0]?.updated)}
+                            ) : (
+                                <div className="flex items-center justify-center">
+                                    <Image
+                                        src="/assets/icons/empty-image.png"
+                                        alt="me"
+                                        width="64"
+                                        height="64"
+                                    />
+                                </div>
+                            )}
                         </div>
-                    </div>
+                        <div className="md:w-2/5 sm:mt-4">
+                            <div className="font-bold text-lg">{value[0]?.title}</div>
+                            <div className="text-sm mt-2">{value[0]?.abstract}</div>
+                            <div className="text-black-50 text-sm mt-2">
+                                {calcualteDay(value[0]?.updated)}
+                            </div>
+                        </div>
+                    </button>
                 </div>
                 <div className="flex flex-wrap mt-4">
                     <div className="md:w-1/2">
@@ -223,19 +241,19 @@ const Layout: React.FC<LayoutType> = ({ data }: LayoutType) => {
 
     const random = () => {
         const min = 1
-        const max = 4
+        const max = 3
         const randomResult = Math.floor(Math.random() * (max - min + 1)) + min
-        return randomResult
+        return 1
     }
 
-    const selectLayout = (data: any): any => {
+    const selectLayout = (data: ContentType): any => {
         const randomResult = random()
 
         const result = selectLayoutFromRandom(randomResult, data)
         return result
     }
 
-    const selectLayoutFromRandom = (randomResult: number, data: any) => {
+    const selectLayoutFromRandom = (randomResult: number, data: ContentType) => {
         let component = <div />
 
         switch (randomResult) {
