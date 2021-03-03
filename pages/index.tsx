@@ -1,15 +1,11 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import React from 'react'
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+const IndexPage: React.FC = () => {
+    return (
+        <div className="w-full h-screen flex items-center justify-center bg-purple-300 font-bold">
+            <h1>Hi next.js 🎉</h1>
+        </div>
+    )
+}
 
 export default IndexPage
