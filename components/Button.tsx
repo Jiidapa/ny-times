@@ -12,12 +12,12 @@ const Button: React.FC<Button> = ({ htmlType, type, children, onClick }: Button)
         <button
             type={htmlType}
             onClick={onClick}
-            className={`px-6 py-1 ${
+            className={`${type !== 'text' && 'px-6 py-1 bg-black text-white'} ${
                 type === 'rounded'
-                    ? 'rounded-default bg-black text-white'
+                    ? 'rounded-default'
                     : type === 'text'
-                    ? 'bg-none sm:px-0 xs:px-0'
-                    : 'rounded-0 bg-black text-white'
+                    ? 'bg-none px-0'
+                    : 'rounded-0'
             }`}>
             {children}
         </button>

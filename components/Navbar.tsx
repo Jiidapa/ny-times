@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
                 <div className="logo" />
                 <div className="flex items-center">
                     <TodayDate />
-                    <div className="border-r mx-3 xs:mx-4 sm:mx-4 border-black-50 border-2 h-full" />
+                    <div className="border-r ml-4 mr-6 xs:mx-4 sm:mx-4 border-black-50 border-2 h-full" />
                     <Search />
                 </div>
             </div>
