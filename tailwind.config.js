@@ -11,9 +11,13 @@ module.exports = {
         fontFamily: {
             sans: ['IBM Plex Sans', 'sans-serif']
         },
+
         extend: {
             colors: {
                 'black-50': 'hsla(0, 100%, 0%, 0.5)'
+            },
+            borderRadius: {
+                default: '64px'
             }
         }
     },
