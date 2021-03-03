@@ -259,7 +259,7 @@ const Layout: React.FC<LayoutType> = ({ data }: LayoutType) => {
     }
 
     return (
-        <div>
+        <div className="mb-20">
             {typeof window === 'undefined' ? (
                 ''
             ) : (

@@ -6,7 +6,7 @@ import { groupSection } from '@utils/index'
 
 const FilterByDateRange = dynamic(() => import('./FilterByDateRange'))
 
-const LayoutSection = dynamic(() => import('@components/Section/Layout'))
+const LayoutSection = dynamic(() => import('@components/ContentLayout'))
 
 const IndexPage: React.FC<IndexType> = ({ resp }: IndexType) => {
     const groupDataBySection = groupSection(resp)
