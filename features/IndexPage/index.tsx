@@ -1,8 +1,7 @@
 import React from 'react'
-import IndexApp from '@features/IndexPage'
 
 const IndexPage: React.FC = () => {
-    return <IndexApp />
+    return <div>test</div>
 }
 
 export default IndexPage

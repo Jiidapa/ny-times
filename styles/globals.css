@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+body {
+    @apply font-sans;
+}
+
+button:focus {
+    outline: none !important;
+}
