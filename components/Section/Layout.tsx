@@ -9,29 +9,41 @@ const Layout: React.FC<any> = ({ data }: any) => {
                 <div className="grid grid-cols-6 gap-5">
                     <div className="col-span-4">
                         <img
-                            src={values[0].image}
+                            src="https://i.ibb.co/vd89ZtB/Rectangle-8.png"
                             width="100%"
                             loading="lazy"
                             className="object-cover"
                         />
                     </div>
                     <div className="col-span-2">
-                        <div className="font-bold text-lg">{values[0].title}</div>
-                        <div className="text-sm mt-2">{values[0].details}</div>
-                        <div className="text-black-50 text-sm mt-2">{values[0].time}</div>
+                        <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                        <div className="text-sm mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                            iaculis odio a finibus. Curabitur finibus libero ac turpis imperdiet,
+                            sit amet laoreet dolor consequat. Suspendisse velit sapien
+                        </div>
+                        <div className="text-black-50 text-sm mt-2">3 hours ago</div>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-5 mt-8">
                     <div>
-                        <div className="font-bold text-lg">{values[1].title}</div>
-                        <div className="text-sm mt-2">{values[1].details}</div>
-                        <div className="text-black-50 text-sm mt-2">{values[1].time}</div>
+                        <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                        <div className="text-sm mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                            iaculis odio a finibus. Curabitur finibus libero ac turpis imperdiet,
+                            sit amet laoreet dolor consequat. Suspendisse velit sapien
+                        </div>
+                        <div className="text-black-50 text-sm mt-2">3 hours ago</div>
                     </div>
                     <div>
-                        <div className="font-bold text-lg">{values[2].title}</div>
-                        <div className="text-sm mt-2">{values[2].details}</div>
-                        <div className="text-black-50 text-sm mt-2">{values[2].time}</div>
+                        <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                        <div className="text-sm mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                            iaculis odio a finibus. Curabitur finibus libero ac turpis imperdiet,
+                            sit amet laoreet dolor consequat. Suspendisse velit sapien
+                        </div>
+                        <div className="text-black-50 text-sm mt-2">3 hours ago</div>
                     </div>
                 </div>
             </div>
@@ -46,28 +58,43 @@ const Layout: React.FC<any> = ({ data }: any) => {
                     <div className="col-span-4">
                         <div className="w-10/12">
                             <img
-                                src={values[0].image}
+                                src="https://i.ibb.co/vd89ZtB/Rectangle-8.png"
                                 width="100%"
                                 loading="lazy"
                                 className="object-cover"
                             />
                         </div>
                         <div className="mt-4">
-                            <div className="font-bold text-lg">{values[0].title}</div>
-                            <div className="text-sm mt-2">{values[0].details}</div>
-                            <div className="text-black-50 text-sm mt-2">{values[0].time}</div>
+                            <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                            <div className="text-sm mt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                                iaculis odio a finibus. Curabitur finibus libero ac turpis
+                                imperdiet, sit amet laoreet dolor consequat. Suspendisse velit
+                                sapien
+                            </div>
+                            <div className="text-black-50 text-sm mt-2">3 hours ago</div>
                         </div>
                     </div>
                     <div className="col-span-3">
                         <div>
-                            <div className="font-bold text-lg">{values[1].title}</div>
-                            <div className="text-sm mt-2">{values[1].details}</div>
-                            <div className="text-black-50 text-sm mt-2">{values[1].time}</div>
+                            <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                            <div className="text-sm mt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                                iaculis odio a finibus. Curabitur finibus libero ac turpis
+                                imperdiet, sit amet laoreet dolor consequat. Suspendisse velit
+                                sapien
+                            </div>
+                            <div className="text-black-50 text-sm mt-2">3 hours ago</div>
                         </div>
                         <div className="mt-5">
-                            <div className="font-bold text-lg">{values[2].title}</div>
-                            <div className="text-sm mt-2">{values[2].details}</div>
-                            <div className="text-black-50 text-sm mt-2">{values[2].time}</div>
+                            <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                            <div className="text-sm mt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                                iaculis odio a finibus. Curabitur finibus libero ac turpis
+                                imperdiet, sit amet laoreet dolor consequat. Suspendisse velit
+                                sapien
+                            </div>
+                            <div className="text-black-50 text-sm mt-2">3 hours ago</div>
                         </div>
                     </div>
                 </div>
@@ -80,14 +107,18 @@ const Layout: React.FC<any> = ({ data }: any) => {
         const component = (
             <div>
                 <div className="grid grid-cols-7 gap-5">
-                    <div className="col-span-3">
-                        <div className="font-bold text-lg">{values[0].title}</div>
-                        <div className="text-sm mt-2">{values[0].details}</div>
-                        <div className="text-black-50 text-sm mt-2">{values[0].time}</div>
+                    <div className="col-span-2">
+                        <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                        <div className="text-sm mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                            iaculis odio a finibus. Curabitur finibus libero ac turpis imperdiet,
+                            sit amet laoreet dolor consequat. Suspendisse velit sapien
+                        </div>
+                        <div className="text-black-50 text-sm mt-2">3 hours ago</div>
                     </div>
-                    <div className="col-span-4">
+                    <div className="col-span-5">
                         <img
-                            src={values[0].image}
+                            src="https://i.ibb.co/vd89ZtB/Rectangle-8.png"
                             width="100%"
                             loading="lazy"
                             className="object-cover"
@@ -96,14 +127,22 @@ const Layout: React.FC<any> = ({ data }: any) => {
                 </div>
                 <div className="grid grid-cols-2 gap-5 mt-8">
                     <div>
-                        <div className="font-bold text-lg">{values[1].title}</div>
-                        <div className="text-sm mt-2">{values[1].details}</div>
-                        <div className="text-black-50 text-sm mt-2">{values[1].time}</div>
+                        <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                        <div className="text-sm mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                            iaculis odio a finibus. Curabitur finibus libero ac turpis imperdiet,
+                            sit amet laoreet dolor consequat. Suspendisse velit sapien
+                        </div>
+                        <div className="text-black-50 text-sm mt-2">3 hours ago</div>
                     </div>
                     <div>
-                        <div className="font-bold text-lg">{values[2].title}</div>
-                        <div className="text-sm mt-2">{values[2].details}</div>
-                        <div className="text-black-50 text-sm mt-2">{values[0].time}</div>
+                        <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                        <div className="text-sm mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                            iaculis odio a finibus. Curabitur finibus libero ac turpis imperdiet,
+                            sit amet laoreet dolor consequat. Suspendisse velit sapien
+                        </div>
+                        <div className="text-black-50 text-sm mt-2">3 hours ago</div>
                     </div>
                 </div>
             </div>
@@ -113,33 +152,50 @@ const Layout: React.FC<any> = ({ data }: any) => {
 
     const layout4 = (values: any) => {
         const component = (
-            <div className="grid grid-cols-3 gap-5">
-                <div className="h-full">
-                    <img
-                        src={values[0].image}
-                        width="100%"
-                        style={{ height: '100% !important' }}
-                        loading="lazy"
-                        className="object-cover"
-                    />
-                </div>
-                <div>
-                    <div>
-                        <div className="font-bold text-lg">{values[0].title}</div>
-                        <div className="text-sm mt-2">{values[0].details}</div>
-                        <div className="text-black-50 text-sm mt-2">{values[0].time}</div>
+            <div>
+                <div className="grid grid-cols-3 gap-5">
+                    <div className="h-full">
+                        <img
+                            src="https://i.ibb.co/vd89ZtB/Rectangle-8.png"
+                            width="100%"
+                            style={{ height: '100% !important' }}
+                            loading="lazy"
+                            className="object-cover"
+                        />
                     </div>
-                </div>
-                <div>
                     <div>
-                        <div className="font-bold text-lg">{values[1].title}</div>
-                        <div className="text-sm mt-2">{values[1].details}</div>
-                        <div className="text-black-50 text-sm mt-2">{values[1].time}</div>
+                        <div>
+                            <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                            <div className="text-sm mt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                                iaculis odio a finibus. Curabitur finibus libero ac turpis
+                                imperdiet, sit amet laoreet dolor consequat. Suspendisse velit
+                                sapien
+                            </div>
+                            <div className="text-black-50 text-sm mt-2">3 hours ago</div>
+                        </div>
                     </div>
-                    <div className="mt-4">
-                        <div className="font-bold text-lg">{values[2].title}</div>
-                        <div className="text-sm mt-2">{values[2].details}</div>
-                        <div className="text-black-50 text-sm mt-2">{values[2].time}</div>
+                    <div>
+                        <div>
+                            <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                            <div className="text-sm mt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                                iaculis odio a finibus. Curabitur finibus libero ac turpis
+                                imperdiet, sit amet laoreet dolor consequat. Suspendisse velit
+                                sapien
+                            </div>
+                            <div className="text-black-50 text-sm mt-2">3 hours ago</div>
+                        </div>
+                        <div className="mt-4">
+                            <div className="font-bold text-lg">Lorem Ipsum Dolor sit amet</div>
+                            <div className="text-sm mt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper
+                                iaculis odio a finibus. Curabitur finibus libero ac turpis
+                                imperdiet, sit amet laoreet dolor consequat. Suspendisse velit
+                                sapien
+                            </div>
+                            <div className="text-black-50 text-sm mt-2">3 hours ago</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -151,7 +207,7 @@ const Layout: React.FC<any> = ({ data }: any) => {
         const min = 1
         const max = 4
         const randomResult = Math.floor(Math.random() * (max - min + 1)) + min
-        console.log(randomResult)
+
         return randomResult
     }
 
