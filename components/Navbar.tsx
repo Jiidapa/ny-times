@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from '../public/assets/icons/logo.svg'
 import Search from './Search'
 import TodayDate from './TodayDate'
 
