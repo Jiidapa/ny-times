@@ -1,20 +1,20 @@
 import React from 'react'
-import LayoutSection from '@components/Section/Layout'
 import Headline from './Headline'
-import FilterByDateRange from './FilterByDateRange'
+import dynamic from 'next/dynamic'
 
-const IndexPage: React.FC<any> = ({ props }: any) => {
-    console.log(props)
+const FilterByDateRange = dynamic(() => import('./FilterByDateRange'))
+
+const LayoutSection = dynamic(() => import('@components/Section/Layout'))
+
+const IndexPage: React.FC = () => {
     return (
         <div className="my-14">
             <Headline />
             <FilterByDateRange />
-            <div className="grid grid-cols-2 gap-5">
-                {props.groupData.map((data, i) => (
+            <div className="grid lg:grid-cols-2 gap-5 grid-cols-1">
+                {['1', '2'].map((item, i) => (
                     <div key={i}>
-                        <div>
-                            <LayoutSection data={data} />
-                        </div>
+                        <LayoutSection />
                     </div>
                 ))}
             </div>

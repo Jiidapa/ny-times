@@ -10,6 +10,10 @@ button:focus {
     outline: none !important;
 }
 
+img {
+    height: 100%;
+}
+
 .logo {
     background-image: url(../public/assets/icons/logo.svg);
     background-repeat: no-repeat;
