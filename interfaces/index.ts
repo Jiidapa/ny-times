@@ -50,3 +50,5 @@ export interface MediaMetadata {
     height?: number
     width?: number
 }
+
+export type FilterDateRangeType = 'Today' | 'This week' | 'This month'

@@ -11,8 +11,9 @@ const IndexPage: React.FC<IndexType> = ({ resp }: IndexType) => {
 
 export default IndexPage
 
-export async function getStaticProps() {
-    const resp = await mostPopular()
+export async function getServerSideProps({ query }: any) {
+    const { filter_date } = query
+    const resp = await mostPopular(filter_date)
     return {
         props: { resp }
     }
