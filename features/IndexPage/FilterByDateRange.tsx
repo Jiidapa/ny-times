@@ -11,6 +11,7 @@ const FilterByDateRange: React.FC = () => {
             {buttonList.map((item: string, i: number) => (
                 <div key={i} className="mr-4">
                     <Button
+                        className={activeTab === i ? 'font-bold' : ''}
                         type={activeTab === i ? 'rounded' : 'outline'}
                         onClick={() => setActiveTab(i)}>
                         {item}

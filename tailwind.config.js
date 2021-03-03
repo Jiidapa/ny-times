@@ -15,7 +15,8 @@ module.exports = {
 
         extend: {
             colors: {
-                'black-50': 'hsla(0, 100%, 0%, 0.5)'
+                'black-50': 'hsla(0, 100%, 0%, 0.5)',
+                'black-80': 'hsla(0, 100%, 0%, 0.8)'
             },
             borderRadius: {
                 default: '64px'
