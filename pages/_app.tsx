@@ -3,6 +3,7 @@ import '@styles/globals.css'
 import { RecoilRoot } from 'recoil'
 import Navbar from '@components/Navbar'
 import Head from 'next/head'
+import Loading from '@components/Loading'
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <link rel="icon" type="image/x-icon" href="https://i.ibb.co/h7thckz/favicon.png" />
             </Head>
             <div className="h-screen xs:px-4 xs:py-6 sm:px-4 sm:py-6 py-16 px-20">
+                <Loading />
                 <Navbar />
                 <Component {...pageProps} />
             </div>
