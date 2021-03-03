@@ -1,11 +1,8 @@
 import React from 'react'
+import IndexApp from '@features/IndexPage'
 
 const IndexPage: React.FC = () => {
-    return (
-        <div className="w-full h-screen flex items-center justify-center bg-purple-300 font-bold">
-            <h1>Hi next.js 🎉</h1>
-        </div>
-    )
+    return <IndexApp />
 }
 
 export default IndexPage
