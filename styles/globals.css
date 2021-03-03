@@ -26,6 +26,11 @@ button:focus {
     width: 32px;
 }
 
+.btn {
+    min-width: 112px;
+    height: 40px;
+}
+
 @media (max-width: 520px) {
     .logo {
         background-size: 32px;
@@ -36,5 +41,9 @@ button:focus {
         background-size: 24px;
         height: 24px;
         width: 24px;
+    }
+    .btn {
+        min-width: 72px;
+        height: 24px;
     }
 }
