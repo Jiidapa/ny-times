@@ -20,7 +20,7 @@ const Search: React.FC<any> = ({ searchResponse, search }: any) => {
 
     const handleOnClickContent = (value: Content) => {
         SetContent(value)
-        const id = value?.['_id'].split('/')[3]
+        const id = value?.['_id'] ? value?.['_id'].split('/')[3] : ''
         router.push(`/content/${id}`)
     }
 

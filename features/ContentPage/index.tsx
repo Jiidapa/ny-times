@@ -3,7 +3,6 @@ import { useRecoilValue } from 'recoil'
 import { contentStore } from '@stores/index'
 import Button from '@components/Button'
 import { useRouter } from 'next/router'
-import Image from 'next/Image'
 import dayjs from 'dayjs'
 
 const ContentPage: React.FC = () => {
@@ -26,7 +25,9 @@ const ContentPage: React.FC = () => {
     const image = content?.multimedia
         ? `https://static01.nyt.com/${content?.multimedia[0].url}`
         : content?.media
-        ? content?.media[0]?.['media-metadata'][2].url
+        ? content.media[0]?.['media-metadata']
+            ? content.media[0]?.['media-metadata'][2].url
+            : ''
         : ''
 
     return (
@@ -55,7 +56,7 @@ const ContentPage: React.FC = () => {
                         {image ? (
                             <img src={image} className="w-full object-cover h-96" />
                         ) : (
-                            <Image
+                            <img
                                 src="/assets/icons/empty-image.png"
                                 alt="me"
                                 width="64"

@@ -255,17 +255,8 @@ const Layout: React.FC<LayoutType> = ({ data }: LayoutType) => {
         return component
     }
 
-    const random = () => {
-        const min = 1
-        const max = 3
-        const randomResult = Math.floor(Math.random() * (max - min + 1)) + min
-        return 1
-    }
-
     const selectLayout = (data: ContentType): any => {
-        const randomResult = random()
-
-        const result = selectLayoutFromRandom(randomResult, data)
+        const result = selectLayoutFromRandom(1, data)
         return result
     }
 

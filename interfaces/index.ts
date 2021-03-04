@@ -2,7 +2,7 @@
 export interface IndexType {
     mostPopularResponse: MostPopularResponse
     searchResponse: SearchResponse
-    search: search
+    search: string
 }
 
 export interface MostPopularResponse {
@@ -129,4 +129,6 @@ export interface Content {
     section_name?: string
     pub_date?: string
     lead_paragraph?: string
+    multimedia?: any[]
+    _id?: string
 }
