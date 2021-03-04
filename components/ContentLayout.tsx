@@ -31,8 +31,8 @@ const Layout: React.FC<LayoutType> = ({ data }: LayoutType) => {
     const layout1 = (value: any): any => {
         const component = (
             <div>
-                <div className="flex flex-wrap">
-                    <button className="text-left" onClick={() => handleOnClickContent(value[0])}>
+                <button className="text-left" onClick={() => handleOnClickContent(value[0])}>
+                    <div className="flex flex-wrap">
                         <div className="md:w-3/5 md:pr-4">
                             {value[0]?.media[0]?.['media-metadata'][2].url ? (
                                 <img
@@ -61,22 +61,36 @@ const Layout: React.FC<LayoutType> = ({ data }: LayoutType) => {
                                 {calcualteDay(value[0]?.updated)}
                             </div>
                         </div>
-                    </button>
-                </div>
+                    </div>
+                </button>
+
                 <div className="flex flex-wrap mt-4">
                     <div className="md:w-1/2">
-                        <div className="font-bold md:text-lg text-default">{value[1]?.title}</div>
-                        <div className="md:text-sm text-xxs mt-2">{value[1]?.abstract}</div>
-                        <div className="text-black-50 md:text-sm text-xxs mt-2">
-                            {value[1] && calcualteDay(value[1]?.updated)}
-                        </div>
+                        <button
+                            className="text-left"
+                            onClick={() => handleOnClickContent(value[1])}>
+                            <div className="font-bold md:text-lg text-default">
+                                {value[1]?.title}
+                            </div>
+                            <div className="md:text-sm text-xxs mt-2">{value[1]?.abstract}</div>
+                            <div className="text-black-50 md:text-sm text-xxs mt-2">
+                                {value[1] && calcualteDay(value[1]?.updated)}
+                            </div>
+                        </button>
                     </div>
+
                     <div className="md:w-1/2 sm:mt-4">
-                        <div className="font-bold md:text-lg text-default">{value[2]?.title}</div>
-                        <div className="md:text-sm text-xxs mt-2">{value[2]?.abstract}</div>
-                        <div className="text-black-50 md:text-sm text-xxs mt-2">
-                            {value[2] && calcualteDay(value[2]?.updated)}
-                        </div>
+                        <button
+                            className="text-left"
+                            onClick={() => handleOnClickContent(value[2])}>
+                            <div className="font-bold md:text-lg text-default">
+                                {value[2]?.title}
+                            </div>
+                            <div className="md:text-sm text-xxs mt-2">{value[2]?.abstract}</div>
+                            <div className="text-black-50 md:text-sm text-xxs mt-2">
+                                {value[2] && calcualteDay(value[2]?.updated)}
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
