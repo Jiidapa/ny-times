@@ -53,9 +53,11 @@ const Layout: React.FC<LayoutType> = ({ data }: LayoutType) => {
                             )}
                         </div>
                         <div className="md:w-2/5 sm:mt-4">
-                            <div className="font-bold text-lg">{value[0]?.title}</div>
-                            <div className="text-sm mt-2">{value[0]?.abstract}</div>
-                            <div className="text-black-50 text-sm mt-2">
+                            <div className="font-bold md:text-lg text-default">
+                                {value[0]?.title}
+                            </div>
+                            <div className="md:text-sm text-xxs mt-2">{value[0]?.abstract}</div>
+                            <div className="text-black-50 md:text-sm text-xxs mt-2">
                                 {calcualteDay(value[0]?.updated)}
                             </div>
                         </div>
@@ -63,16 +65,16 @@ const Layout: React.FC<LayoutType> = ({ data }: LayoutType) => {
                 </div>
                 <div className="flex flex-wrap mt-4">
                     <div className="md:w-1/2">
-                        <div className="font-bold text-lg">{value[1]?.title}</div>
-                        <div className="text-sm mt-2">{value[1]?.abstract}</div>
-                        <div className="text-black-50 text-sm mt-2">
+                        <div className="font-bold md:text-lg text-default">{value[1]?.title}</div>
+                        <div className="md:text-sm text-xxs mt-2">{value[1]?.abstract}</div>
+                        <div className="text-black-50 md:text-sm text-xxs mt-2">
                             {value[1] && calcualteDay(value[1]?.updated)}
                         </div>
                     </div>
                     <div className="md:w-1/2 sm:mt-4">
-                        <div className="font-bold text-lg">{value[2]?.title}</div>
-                        <div className="text-sm mt-2">{value[2]?.abstract}</div>
-                        <div className="text-black-50 text-sm mt-2">
+                        <div className="font-bold md:text-lg text-default">{value[2]?.title}</div>
+                        <div className="md:text-sm text-xxs mt-2">{value[2]?.abstract}</div>
+                        <div className="text-black-50 md:text-sm text-xxs mt-2">
                             {value[2] && calcualteDay(value[2]?.updated)}
                         </div>
                     </div>
@@ -277,12 +279,12 @@ const Layout: React.FC<LayoutType> = ({ data }: LayoutType) => {
     }
 
     return (
-        <div className="mb-20">
+        <div className="mb-20 sm:mt-4 xs:mt-4">
             {typeof window === 'undefined' ? (
                 ''
             ) : (
                 <div>
-                    <div className="border-b border-black-50 font-bold text-2xl mb-6">
+                    <div className="border-b border-black-50 font-bold md:text-2xl text-md mb-6">
                         {data.name}
                     </div>
                     {selectLayout(data.value)}
