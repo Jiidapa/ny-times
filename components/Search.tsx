@@ -1,14 +1,24 @@
 import React from 'react'
 import Button from './Button'
+import { useState } from 'react'
+import { useRecoilState } from 'recoil'
+import { searchSelector } from '@stores/index'
+import Cookies from 'next-cookies'
 
-const Search: React.FC = () => {
+const SearchContianer: React.FC = () => {
+    const [search, setSearch] = useRecoilState(searchSelector)
+
     return (
-        <div>
-            <Button type="text">
-                <div className="search-container" />
+        <>
+            <Button type="text" onClick={() => setSearch(!search)}>
+                {search ? (
+                    <div className="close-container" />
+                ) : (
+                    <div className="search-container" />
+                )}
             </Button>
-        </div>
+        </>
     )
 }
 
-export default Search
+export default SearchContianer

@@ -1,6 +1,7 @@
-import { filterRangeSelector, filterDateRangeStore } from './FilterDateRange'
+import { filterRangeSelector, filterDateRangeStore } from './filterDateRange'
 import { loadingSelector, loadingState } from './loading'
 import { contentSelector, contentStore } from './content'
+import { searchSelector, searchStore } from './search'
 
 export {
     filterRangeSelector,
@@ -8,5 +9,7 @@ export {
     loadingSelector,
     loadingState,
     contentSelector,
-    contentStore
+    contentStore,
+    searchSelector,
+    searchStore
 }

@@ -1,3 +1,4 @@
-import { mostPopular } from './most_popular'
+import { most_popular_service } from './most_popular'
+import { search_service } from './search'
 
-export { mostPopular }
+export { most_popular_service, search_service }

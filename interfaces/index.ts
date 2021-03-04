@@ -52,3 +52,49 @@ export interface MediaMetadata {
 }
 
 export type FilterDateRangeType = 'Today' | 'This week' | 'This month'
+
+export interface SearchResponse {
+    status: string
+    copyright: string
+    response?: ResponseData
+}
+
+export interface ResponseData {
+    docs?: any[]
+    meta?: ResponseMeta
+}
+
+export interface ResponseMeta {
+    hits?: number
+    offset?: number
+    time?: number
+}
+
+export interface ResponseDocs {
+    abstract?: string
+    web_url?: string
+    snippet?: string
+    lead_paragraph?: string
+    print_section?: string
+    print_page?: string
+    source?: string
+    multimedia?: ResponseMultimedia[]
+}
+
+export interface ResponseMultimedia {
+    rank?: number
+    subtype?: string
+    caption?: null
+    credit?: null
+    type?: string
+    url?: string
+    height?: number
+    width?: number
+    legacy?: {
+        xlarge?: string
+        xlargewidth?: number
+        xlargeheight?: number
+    }
+    subType?: string
+    crop_name?: string
+}
