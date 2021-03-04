@@ -15,7 +15,7 @@ const IndexPage: React.FC<IndexType> = ({ resp }: IndexType) => {
             <Headline />
             <FilterByDateRange />
             <div className="grid lg:grid-cols-2 md:gap-5 grid-cols-1">
-                {groupDataBySection.map((data, i) => (
+                {groupDataBySection.map((data: any, i: number) => (
                     <div key={i}>
                         <LayoutSection data={data} />
                     </div>
