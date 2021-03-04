@@ -1,9 +1,11 @@
 // The Most Popular Interface
 export interface IndexType {
-    resp: MostPopularType
+    mostPopularResponse: MostPopularResponse
+    searchResponse: SearchResponse
+    search: search
 }
 
-export interface MostPopularType {
+export interface MostPopularResponse {
     status?: string
     copyright?: string
     num_results?: number
@@ -97,4 +99,34 @@ export interface ResponseMultimedia {
     }
     subType?: string
     crop_name?: string
+}
+
+export interface Content {
+    uri?: string
+    url?: string
+    id?: number
+    asset_id?: number
+    source?: string
+    published_date?: string
+    updated?: string
+    section?: string
+    subsection?: string
+    nytdsection?: string
+    adx_keywords?: string
+    column?: null | any
+    byline?: string
+    type?: string
+    title?: string
+    abstract?: string
+    des_facet?: string[]
+    org_facet?: string[]
+    per_facet?: string[]
+    geo_facet?: string[]
+    media?: Media[]
+    eta_id?: number
+    web_url?: string
+    snippet?: string
+    section_name?: string
+    pub_date?: string
+    lead_paragraph?: string
 }

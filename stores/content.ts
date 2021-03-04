@@ -1,12 +1,12 @@
 import { atom, selector } from 'recoil'
-import { Result } from '@interfaces/index'
+import { Content } from '@interfaces/index'
 
-const contentStore = atom<Result>({
+const contentStore = atom<Content>({
     key: 'contentStore',
     default: {}
 })
 
-const contentSelector = selector<Result>({
+const contentSelector = selector<Content>({
     key: 'contentSelector',
     set: ({ set }, newValue) => set(contentStore, newValue),
     get: ({ get }) => get(contentStore)

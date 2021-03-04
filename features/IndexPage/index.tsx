@@ -11,13 +11,17 @@ const FilterByDateRange = dynamic(() => import('./FilterByDateRange'))
 
 const LayoutSection = dynamic(() => import('@components/ContentLayout'))
 
-const IndexPage: React.FC<IndexType> = ({ resp }: IndexType) => {
-    const groupDataBySection = groupSection(resp)
+const IndexPage: React.FC<IndexType> = ({
+    searchResponse,
+    mostPopularResponse,
+    search
+}: IndexType) => {
+    const groupDataBySection = groupSection(mostPopularResponse)
     const isSearch = useRecoilValue(searchStore)
 
     return (
         <div>
-            {isSearch ? (
+            {!isSearch ? (
                 <div className="my-14">
                     <Headline />
                     <FilterByDateRange />
@@ -30,7 +34,7 @@ const IndexPage: React.FC<IndexType> = ({ resp }: IndexType) => {
                     </div>
                 </div>
             ) : (
-                <SearchContainer />
+                <SearchContainer searchResponse={searchResponse} search={search} />
             )}
         </div>
     )
