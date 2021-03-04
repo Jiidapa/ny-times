@@ -14,19 +14,21 @@ const ContentPage: React.FC = () => {
 
     return (
         <div>
-            <div className="flex">
-                <div className="w-1/12">
+            <div className="flex flex-wrap">
+                <div className="md:w-1/12 w-full">
                     <Button type="text" onClick={() => router.back()}>
                         <img src="/assets/icons/back_icon.svg" />
                     </Button>
                 </div>
-                <div className="px-45 w-11/12">
+                <div className="px-45 w-11/12 sm:mt-4 xs:mt-4">
                     <div className="uppercase text-sm text-black-50 font-bold">{section}</div>
-                    <div className="text-3xl font-bold">{title}</div>
-                    <div className="italic mt-1 text-xl">{abstract}</div>
+                    <div className="md:text-3xl text-xl font-bold">{title}</div>
+                    <div className="italic mt-1 md:text-xl text-default">{abstract}</div>
                     <div className="flex">
                         <div className="my-6 font-bold">
-                            {dayjs(published_date).format('DD MMM YYYY hh:mm A')}
+                            <span className="md:text-lg text-sm">
+                                {dayjs(published_date).format('DD MMM YYYY hh:mm A')}
+                            </span>
                         </div>
                         <div></div>
                     </div>

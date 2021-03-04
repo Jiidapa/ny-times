@@ -29,7 +29,7 @@ const Button: React.FC<Button> = ({
                     ? 'bg-none px-0'
                     : type === 'outline'
                     ? 'bg-white rounded-default border-2 border-black-80 text-black-80'
-                    : 'rounded-0 bg-black text-white px-8 py-4 font-bold'
+                    : 'rounded-0 bg-black text-white px-8 md:py-4 py-2 font-bold'
             }`}>
             {children}
         </button>

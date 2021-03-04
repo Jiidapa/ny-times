@@ -48,7 +48,7 @@ img {
     }
     .btn {
         min-width: 72px;
-        height: 24px;
+        min-height: 24px;
     }
 }
 
