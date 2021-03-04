@@ -4,13 +4,15 @@ import { useRouter } from 'next/router'
 import { calcualteDay } from '@utils/index'
 import SearchIcon from '../../public/assets/icons/search_icon_small.svg'
 import { contentSelector } from '@stores/index'
-import { useSetRecoilState } from 'recoil'
 import { Content } from '@interfaces/index'
 import Image from 'next/image'
+import { useSetRecoilState } from 'recoil'
+import { searchSelector } from '@stores/index'
 
 const Search: React.FC<any> = ({ searchResponse, search }: any) => {
     const router = useRouter()
     const SetContent = useSetRecoilState(contentSelector)
+    const setSearch = useSetRecoilState(searchSelector)
 
     const handleSearch = useDebouncedCallback((value: string) => {
         router.push(`/?search=${value}`)
@@ -21,6 +23,7 @@ const Search: React.FC<any> = ({ searchResponse, search }: any) => {
     const handleOnClickContent = (value: Content) => {
         SetContent(value)
         const id = value?.['_id'] ? value?.['_id'].split('/')[3] : ''
+        setSearch(false)
         router.push(`/content/${id}`)
     }
 
