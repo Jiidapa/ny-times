@@ -99,7 +99,7 @@ img {
 }
 
 .search input[type='text'] {
-    @apply ml-6 h-12 w-80 text-3xl font-bold;
+    @apply ml-6 h-12 w-full text-3xl font-bold;
 }
 
 .search input[type='text']::placeholder {
