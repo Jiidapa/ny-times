@@ -52,7 +52,8 @@ export async function getServerSideProps({ query }: any) {
     const { filter_date, search } = query
     const mostPopularResponse = await most_popular_service(filter_date)
     const searchValue = search || ''
-    if (searchValue) {
+    console.log('searchValue ', searchValue)
+    if (searchValue !== '' && searchValue !== undefined) {
         searchResponse = await search_service(search)
     }
 
