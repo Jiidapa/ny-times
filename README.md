@@ -7,6 +7,20 @@ This is a project that shows about new you time with the most popular viewed art
 NEXT_PUBLIC_API_URL = <br/>
 NEXT_PUBLIC_API_KEY = 
 
+## How to run this project
+1. install packages
+```
+yarn
+```
+2. run project
+```
+yarn dev
+```
+3. view demo with
+```
+localhost:3000
+```
+
 ## Deploy your own
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
