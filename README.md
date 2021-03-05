@@ -4,7 +4,7 @@ Demo : https://ny-times.vercel.app
 This is a project that shows about new you time with the most popular viewed articles.
 
 ## .env
-NEXT_PUBLIC_API_URL = 
+NEXT_PUBLIC_API_URL = <br/>
 NEXT_PUBLIC_API_KEY = 
 
 ## Deploy your own
