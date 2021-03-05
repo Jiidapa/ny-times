@@ -1,15 +1,21 @@
 import React from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 import { useRouter } from 'next/router'
-import { calcualteDay } from '@utils/index'
+import { calculateDay } from '@utils/index'
 import SearchIcon from '../../public/assets/icons/search_icon_small.svg'
 import { contentSelector } from '@stores/index'
 import { Content } from '@interfaces/index'
-import Image from 'next/image'
 import { useSetRecoilState } from 'recoil'
 import { searchSelector } from '@stores/index'
+import { SearchResponse } from '@interfaces/index'
 
-const Search: React.FC<any> = ({ searchResponse, search }: any) => {
+export interface Type {
+    searchResponse?: SearchResponse
+    search?: string
+    role?: string
+}
+
+const SearchContainer: React.FC<Type> = ({ searchResponse, search, role }: Type) => {
     const router = useRouter()
     const SetContent = useSetRecoilState(contentSelector)
     const setSearch = useSetRecoilState(searchSelector)
@@ -28,11 +34,11 @@ const Search: React.FC<any> = ({ searchResponse, search }: any) => {
     }
 
     return (
-        <div>
+        <div role={role}>
             <>
                 <div className="flex search items-center">
                     <div className="mr-1">
-                        <SearchIcon />
+                        <SearchIcon role="search-icon" />
                     </div>
                     <input
                         type="text"
@@ -56,25 +62,25 @@ const Search: React.FC<any> = ({ searchResponse, search }: any) => {
                                             {item.section_name}
                                         </div>
                                         <div className="font-bold md:text-xl text-default mt-1">
-                                            {item.abstract}
+                                            {item?.headline?.main}
                                         </div>
                                         <div className="md:text-sm text-xxs mt-2">
                                             {item.snippet}
                                         </div>
                                         <div className="text-black-50 md:text-sm text-xxs mt-2">
-                                            {calcualteDay(item.pub_date)}
+                                            {calculateDay(item.pub_date)}
                                         </div>
                                     </div>
                                     <div className="lg:w-1/5 w-full">
                                         <div style={{ height: '150px' }}>
-                                            {item?.multimedia ? (
+                                            {item?.multimedia.length > 0 ? (
                                                 <img
                                                     src={`https://static01.nyt.com/${item?.multimedia[0]?.url}`}
                                                     className="w-full object-cover"
                                                 />
                                             ) : (
                                                 <div className="flex items-center justify-center">
-                                                    <Image
+                                                    <img
                                                         src="/assets/icons/empty-image.png"
                                                         alt="me"
                                                         width="64"
@@ -96,4 +102,4 @@ const Search: React.FC<any> = ({ searchResponse, search }: any) => {
     )
 }
 
-export default Search
+export default SearchContainer

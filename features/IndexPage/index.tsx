@@ -1,15 +1,14 @@
 import React from 'react'
 import Headline from './Headline'
-import dynamic from 'next/dynamic'
 import { IndexType } from '@interfaces/index'
 import { groupSection } from '@utils/index'
 import { useRecoilValue } from 'recoil'
 import { searchStore } from '@stores/search'
 import SearchContainer from './Search'
 
-const FilterByDateRange = dynamic(() => import('./FilterByDateRange'))
+import FilterByDateRange from './FilterByDateRange'
 
-const LayoutSection = dynamic(() => import('@components/ContentLayout'))
+import LayoutSection from '@components/ContentLayout'
 
 const IndexPage: React.FC<IndexType> = ({
     searchResponse,
@@ -28,13 +27,17 @@ const IndexPage: React.FC<IndexType> = ({
                     <div className="grid lg:grid-cols-2 md:gap-5 grid-cols-1">
                         {groupDataBySection.map((data: any, i: number) => (
                             <div key={i}>
-                                <LayoutSection data={data} />
+                                <LayoutSection name={data.name} value={data.value} />
                             </div>
                         ))}
                     </div>
                 </div>
             ) : (
-                <SearchContainer searchResponse={searchResponse} search={search} />
+                <SearchContainer
+                    searchResponse={searchResponse}
+                    search={search}
+                    role="search-container"
+                />
             )}
         </div>
     )

@@ -11,5 +11,6 @@ export const groupSection = (value: MostPopularResponse) => {
         }
         groupList.push(section)
     }
+
     return groupList
 }

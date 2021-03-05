@@ -5,14 +5,13 @@ import { useRouter } from 'next/router'
 
 const Navbar: React.FC = () => {
     const router = useRouter()
-    const { pathname } = router
-    console.log(router.pathname)
+
     return (
         <div className="flex justify-between mb-14">
             <div className="logo" />
-            <div className="flex items-center">
+            <div className="flex items-center" role="logo-icon">
                 <TodayDate />
-                {pathname.includes('content') ? (
+                {router?.pathname.includes('content') ? (
                     ''
                 ) : (
                     <>

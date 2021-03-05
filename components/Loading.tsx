@@ -9,7 +9,7 @@ const Loading = () => {
     return (
         <>
             {isLoading ? (
-                <div className="loading-container">
+                <div className="loading-container" role="loading-container">
                     <ReactLoading type="bubbles" color="#000" height={100} width={100} />
                 </div>
             ) : null}

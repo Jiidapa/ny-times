@@ -10,9 +10,9 @@ const SearchContianer: React.FC = () => {
         <>
             <Button type="text" onClick={() => setSearch(!search)}>
                 {search ? (
-                    <div className="close-container" />
+                    <div className="close-container" data-testid="close-container" />
                 ) : (
-                    <div className="search-container" />
+                    <div className="search-container" data-testid="search-container" />
                 )}
             </Button>
         </>

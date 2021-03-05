@@ -11,7 +11,7 @@ const calculateDayAmountOfTheYear = () => {
     return amountDays
 }
 
-export const calcualteDay = (date: string) => {
+export const calculateDay = (date: string) => {
     const now = dayjs()
     const diffMinute = now.diff(date, 'minutes')
     const diffHour = now.diff(date, 'hours')

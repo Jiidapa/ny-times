@@ -1,4 +1,4 @@
 import { groupSection } from './groupSection'
-import { calcualteDay } from './calculateTime'
+import { calculateDay } from './calculateTime'
 
-export { groupSection, calcualteDay }
+export { groupSection, calculateDay }

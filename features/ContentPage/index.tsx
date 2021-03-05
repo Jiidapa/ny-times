@@ -16,11 +16,10 @@ const ContentPage: React.FC = () => {
         pub_date,
         section_name,
         snippet,
-        web_url
+        web_url,
+        headline
     } = content
     const router = useRouter()
-
-    console.log(content?.media ? 'ee' : 'yy')
 
     const image = content?.multimedia
         ? `https://static01.nyt.com/${content?.multimedia[0].url}`
@@ -42,7 +41,7 @@ const ContentPage: React.FC = () => {
                     <div className="uppercase text-sm text-black-50 font-bold">
                         {section || section_name}
                     </div>
-                    <div className="md:text-3xl text-xl font-bold">{title}</div>
+                    <div className="md:text-3xl text-xl font-bold">{title || headline?.main}</div>
                     <div className="italic mt-1 md:text-xl text-default">{abstract}</div>
                     <div className="flex">
                         <div className="my-6 font-bold">
@@ -54,17 +53,21 @@ const ContentPage: React.FC = () => {
                     </div>
                     <div>
                         {image ? (
-                            <img src={image} className="w-full object-cover h-96" />
+                            <img
+                                src={image}
+                                className="w-full object-cover h-96"
+                                role="content-banner-image"
+                            />
                         ) : (
                             <img
                                 src="/assets/icons/empty-image.png"
                                 alt="me"
                                 width="64"
                                 height="64"
+                                role="content-banner-empty-image"
                             />
                         )}
                     </div>
-                    <div className="mt-4">{snippet}</div>
                     <div>
                         <Button
                             className="uppercase mt-7"

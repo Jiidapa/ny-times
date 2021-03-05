@@ -56,8 +56,8 @@ export interface MediaMetadata {
 export type FilterDateRangeType = 'Today' | 'This week' | 'This month'
 
 export interface SearchResponse {
-    status: string
-    copyright: string
+    status?: string
+    copyright?: string
     response?: ResponseData
 }
 
@@ -131,4 +131,5 @@ export interface Content {
     lead_paragraph?: string
     multimedia?: any[]
     _id?: string
+    headline?: any
 }
