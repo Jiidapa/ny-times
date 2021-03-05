@@ -1,6 +1,11 @@
-# TypeScript Next.js example
+# New York Times - Most Popylar
+Demo : https://ny-times.vercel.app
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+This is a project that shows about new you time with the most popular viewed articles.
+
+## .Env
+NEXT_PUBLIC_API_URL = 
+NEXT_PUBLIC_API_KEY = 
 
 ## Deploy your own
 
