@@ -15,7 +15,6 @@ const ContentPage: React.FC = () => {
         url,
         pub_date,
         section_name,
-        snippet,
         web_url,
         headline
     } = content

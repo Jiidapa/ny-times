@@ -9,7 +9,7 @@ export interface ContentType {
     value: Result[]
 }
 
-export const data: LayoutType = {
+export const data: any = {
     name: 'U.S.',
     value: [
         {
