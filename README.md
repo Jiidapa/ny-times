@@ -18,7 +18,7 @@ yarn dev
 ```
 3. view demo with
 ```
-localhost:3000
+http://localhost:3000
 ```
 
 ## Deploy your own
