@@ -1,12 +1,12 @@
 module.exports = {
-    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+    // purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     darkMode: false, // or 'media' or 'class'
     theme: {
         screens: {
             xs: { max: '280px' },
-            sm: { min: '281px', max: '540px' },
-            md: '540',
-            lg: '976px',
+            sm: { min: '281px', max: '539px' },
+            md: { min: '540px' },
+            lg: { min: '976px' },
             xl: '1440px'
         },
         fontFamily: {

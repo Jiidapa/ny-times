@@ -1,4 +1,9 @@
 {
     "presets": ["next/babel"],
+    "env": {
+        "test": {
+            "plugins": ["transform-dynamic-import", "dynamic-import-node"]
+        }
+    },
     "plugins": ["inline-react-svg", "@babel/syntax-dynamic-import"]
 }
